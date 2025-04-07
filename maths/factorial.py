@@ -8,7 +8,7 @@
 
 # number = 5
 # print(factorial(number))
-)
+
 
 # Using Recursion
 

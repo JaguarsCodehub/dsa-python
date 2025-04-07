@@ -9,8 +9,3 @@
 #     return a if b == 0 else gcd(b , a % b )
 
 # print(gcd(9, 21))
-
-
-def gcd(a, b):
-
-    return a if b == 0 else gcd(b, a % b)
