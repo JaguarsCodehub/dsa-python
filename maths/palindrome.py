@@ -5,17 +5,27 @@
 # number = 12321
 # print(palindrome(number))
 
-
-def is_plaindrome(n):
+def is_palindrome(n):
     n = abs(n)
 
-    original, reverse =  n,0
+    original, reverse = n, 0
 
     while n > 0:
+
         reverse = reverse * 10 + n % 10
-        n //=10
+        n //= 10
 
     return original == reverse
+# def is_plaindrome(n):
+#     n = abs(n)
 
-number  = 12321
-print(is_plaindrome(number))
+#     original, reverse =  n,0
+
+#     while n > 0:
+#         reverse = reverse * 10 + n % 10
+#         n //=10
+
+#     return original == reverse
+
+# number  = 12321
+# print(is_plaindrome(number))

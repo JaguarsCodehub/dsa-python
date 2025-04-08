@@ -24,7 +24,7 @@ def two_sum(nums, target):
 
         complement = target - num
 
-        if complement in numMap:
+        if complement in  numMap:
             return [numMap[complement], i]
         
         numMap[num] = i
