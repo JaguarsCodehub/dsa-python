@@ -39,15 +39,56 @@
 #     return maximumProfit
 
 
+# def maxProfit(prices):
+#     maxiumProfit = 0
+#     minPriceSoFar = prices[0]
+
+#     for price in prices[1:]:
+#         profitIfSoldToday = price - minPriceSoFar
+#         if profitIfSoldToday > maxiumProfit:
+#             maxiumProfit = profitIfSoldToday
+
+#         if price < minPriceSoFar:
+#             minPriceSoFar = price
+#     return maxiumProfit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def maxProfit(prices):
-    maxiumProfit = 0
-    minPriceSoFar = prices[0]
+
+    minimumPriceSoFar = prices[0]
+    maximumProfit = 0
 
     for price in prices[1:]:
-        profitIfSoldToday = price - minPriceSoFar
-        if profitIfSoldToday > maxiumProfit:
-            maxiumProfit = profitIfSoldToday
-
-        if price < minPriceSoFar:
-            minPriceSoFar = price
-    return maxiumProfit
+        profitIfSoldToday = prices - minimumPriceSoFar
+        if profitIfSoldToday > maximumProfit:
+            maximumProfit == profitIfSoldToday
+        
+        if price < minimumPriceSoFar:
+            minimumPriceSoFar == price
+    return maximumProfit

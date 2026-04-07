@@ -27,3 +27,13 @@ def singleNumber(nums):
         xor_result ^= num
     
     return xor_result
+
+
+
+def singleNumber(nums):
+    xor_result = 0
+
+    for num in nums:
+        xor_result ^= num
+    
+    return xor_result

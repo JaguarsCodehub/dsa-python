@@ -19,11 +19,23 @@
 # Explanation:
 # n = 9 since there are 9 numbers, so all numbers are in the range [0,9]. 8 is the missing number in the range since it does not appear in nums.
 
+# def missingNumber(nums):
+#     n = len(nums)
+#     xor_result = n
+
+#     for i, num in enumerate(nums):
+#         xor_result ^= i ^ num
+    
+#     return xor_result
+
+
+
 def missingNumber(nums):
-    n = len(nums)
+
     xor_result = n
+    n = len(nums)
+
 
     for i, num in enumerate(nums):
         xor_result ^= i ^ num
-    
     return xor_result
