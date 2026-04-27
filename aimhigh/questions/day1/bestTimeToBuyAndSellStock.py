@@ -55,7 +55,21 @@
 
 
 
+def maxProfit(prices):
+    maximumProfit = 0
 
+    minPriceSoFar = prices[0]
+
+    for price in prices[1:]:
+        profitIfSoldToday = price - minPriceSoFar
+        if profitIfSoldToday > maximumProfit:
+            maximumProfit = profitIfSoldToday
+
+        
+        if price < minPriceSoFar:
+            minPriceSoFar = price
+
+    return maximumProfit
 
 
 

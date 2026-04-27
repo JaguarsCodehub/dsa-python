@@ -26,26 +26,33 @@
 #             if arr[i] + arr[j] == target:
 #                 return [i, j]
             
-def twoSum(arr, target):
-    seen = {}
-
-    for i, num in enumerate(arr):
-        complement = target - num
-        if complement == target:
-            return [seen[complement], i]
-        seen[num] = i
-
-
 # def twoSum(arr, target):
 #     seen = {}
 
 #     for i, num in enumerate(arr):
 #         complement = target - num
-#         if complement in seen:
+#         if complement == target:
 #             return [seen[complement], i]
 #         seen[num] = i
-    
 
-# arr = [2,7,11,15]
-# target = 9
-# print(twoSum(arr, target))
+
+def twoSum(target, nums):
+    prevhMap = {} # val: index
+
+    for i, n in enumerate(nums):
+        diff = target - n
+
+        if diff in prevhMap:
+            return [prevhMap[diff], i]
+        prevhMap[n] = i
+    return
+
+def twoSumm(nums, target):
+    hashMap = {} # val: index
+
+    for i, num in enumerate(nums):
+        difference  = target - num
+        if difference in hashMap:
+            return [hashMap[difference], i]
+        hashMap[num] = i
+    return
